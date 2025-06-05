@@ -9,9 +9,11 @@ exports.register = async (req, res) => {
   try {
     let { email, password, tipo } = req.body;
 
-    // Validar formato de email
+    tipo = Number(tipo); // Forzar número antes de validar
+
+    // Validar formato de email SOLO si es estudiante
     const emailRegex = /^1001\.\d{7,8}\.ucla@gmail\.com$/;
-    if (!emailRegex.test(email)) {
+    if (tipo === 1 && !emailRegex.test(email)) {
       return res.status(400).json({ msg: "Correo no cumple el formato requerido" });
     }
 
@@ -23,8 +25,6 @@ exports.register = async (req, res) => {
       });
     }
 
-    // Validar tipo (forzar a number, por si viene como string)
-    tipo = Number(tipo);
     if (![1, 2].includes(tipo)) {
       return res.status(400).json({ msg: "Tipo debe ser 1 (estudiante) o 2 (profesor)" });
     }
@@ -62,6 +62,7 @@ exports.register = async (req, res) => {
     }
   }
 };
+
 
 exports.login = async (req, res) => {
   try {
