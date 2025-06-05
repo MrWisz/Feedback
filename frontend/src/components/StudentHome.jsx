@@ -139,7 +139,7 @@ export default function StudentHome({ user }) {
         <textarea
           style={styles.textarea}
           rows={5}
-          maxLength={800}
+          maxLength={3000}
           value={feedback}
           placeholder={showPlaceholder ? "Escribe aquí tu opinión, sugerencia o comentario." : ""}
           onChange={e => setFeedback(e.target.value)}
