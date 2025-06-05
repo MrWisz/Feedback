@@ -25,10 +25,11 @@ app.use('/api/feedback', feedbackRoutes);
 app.use(express.static(path.join(__dirname, "public")));
 
 // Para cualquier ruta que no sea API, sirve index.html del frontend
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   if (req.originalUrl.startsWith('/api/')) return res.status(404).json({ msg: "Not found" });
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 // ---------------------------------------------------------------------
 
 const PORT = process.env.PORT || 3001;
