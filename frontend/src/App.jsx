@@ -26,7 +26,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/register-profesor@yx3%+" element={<RegisterProfesor />} />
+        <Route path="/register-profesor6" element={<RegisterProfesor />} />
         <Route
           path="/home"
           element={
