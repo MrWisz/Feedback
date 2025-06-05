@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import StudentHome from "./components/StudentHome";
 import ProfessorHome from "./components/ProfessorHome";
+import RegisterProfesor from "./components/RegisterProfesor";
 
 export default function App() {
   // Recupera usuario guardado en localStorage (si existe)
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/register-profesorXo=s2@" element={<RegisterProfesor />} />
         <Route
           path="/home"
           element={
