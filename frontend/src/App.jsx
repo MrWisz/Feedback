@@ -23,11 +23,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing setUser={setUser} />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/register-profesor" element={<RegisterProfesor />} />
-        
         <Route
           path="/home"
           element={

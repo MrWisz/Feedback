@@ -73,11 +73,7 @@ const mediaQuery = `
 
 export default function Landing() {
 
-     useEffect(() => {
-    setUser(null);
-    localStorage.removeItem("user");
-  }, [setUser]);
-  
+    
   return (
     <div style={styles.root}>
       <style>{mediaQuery}</style>
