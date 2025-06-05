@@ -27,6 +27,7 @@ export default function App() {
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/register-profesor" element={<RegisterProfesor />} />
+        <Route path="/" element={<Landing setUser={setUser} />} />
         <Route
           path="/home"
           element={
